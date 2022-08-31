@@ -1,10 +1,11 @@
 # SAMMI-YouTube-Link-Handler
 - Originally is an extension call "YouTube Video Duration" by Christina K.
-- Specially modified/enhanced for the purpose of use by myself and/or Epi's LB2 gang
-- Ported to ~~LB2~~ SAMMI
+- Specially modified/enhanced for the purpose of use by myself and/or Epi's SAMMI gang
+- Ported to LB2 on v3.0 and SAMMI on v3.2
 
 what this extension do ?  
-Pass a youtube link to extension, and it will return 4 variable for you. 
+Pass a youtube link to extension,  
+and it will return 4 global variable for you.
 1. Extract Youtube's VideoID from link
 2. Return "Left Over" duration in milliseconds
    - if t= params not detect in url link, return full video duration.
