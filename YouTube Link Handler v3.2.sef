@@ -1,0 +1,702 @@
+[extension_name]
+YouTube Link Handler
+[extension_info]
+@name: YouTube Link Handler, @version: 3.2 , @author: LeonWong93
+Originally is "YouTube Video Duration" by Christina K.
+Specially modified/enhanced for the purpose of use by myself and/or Epi's SAMMI gang
+[insert_external]
+<div>
+<p>YouTube Link Handler v3.2 by LeonWong93 is installed</p>
+- Originally is an extension call "YouTube Video Duration" by Christina K.
+<br>- Specially modified/enhanced for the purpose of use by myself and/or Epi's SAMMI gang
+<br><br>Greetings from Leon : Have fun on streaming guys =D
+</div>
+<br>
+<div>
+<button type="button" onclick="yt_link_test()">Test Result</button>
+<br>
+Youtube Link: <input type="text" id="yt_link" size="50" style="margin:5px 0px"; value="https://youtu.be/KaqC5FnvAEc?t=12">
+<br>
+Country Code: <input type="text" id="yt_cc" size="5" style="margin:5px 0px"; value="MY" readonly> <select id="yt_cc_select" onChange="document.getElementById('yt_cc').value = document.querySelector('#yt_cc_select').value">
+<option value="AF">Afghanistan</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="AS">American Samoa</option>
+<option value="AD">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AI">Anguilla</option>
+<option value="AQ">Antarctica</option>
+<option value="AG">Antigua and Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AW">Aruba</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BS">Bahamas</option>
+<option value="BH">Bahrain</option>
+<option value="BD">Bangladesh</option>
+<option value="BB">Barbados</option>
+<option value="BY">Belarus</option>
+<option value="BE">Belgium</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BM">Bermuda</option>
+<option value="BT">Bhutan</option>
+<option value="BO">Bolivia</option>
+<option value="BA">Bosnia and Herzegovina</option>
+<option value="BW">Botswana</option>
+<option value="BR">Brazil</option>
+<option value="IO">British Indian Ocean Territory</option>
+<option value="VG">British Virgin Islands</option>
+<option value="BN">Brunei</option>
+<option value="BG">Bulgaria</option>
+<option value="BF">Burkina Faso</option>
+<option value="BI">Burundi</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CV">Cape Verde</option>
+<option value="KY">Cayman Islands</option>
+<option value="CF">Central African Republic</option>
+<option value="TD">Chad</option>
+<option value="CL">Chile</option>
+<option value="CN">China</option>
+<option value="CX">Christmas Island</option>
+<option value="CC">Cocos Islands</option>
+<option value="CO">Colombia</option>
+<option value="KM">Comoros</option>
+<option value="CK">Cook Islands</option>
+<option value="CR">Costa Rica</option>
+<option value="HR">Croatia</option>
+<option value="CU">Cuba</option>
+<option value="CW">Curacao</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Republic</option>
+<option value="CD">Democratic Republic of the Congo</option>
+<option value="DK">Denmark</option>
+<option value="DJ">Djibouti</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="TL">East Timor</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="EE">Estonia</option>
+<option value="ET">Ethiopia</option>
+<option value="FK">Falkland Islands</option>
+<option value="FO">Faroe Islands</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="PF">French Polynesia</option>
+<option value="GA">Gabon</option>
+<option value="GM">Gambia</option>
+<option value="GE">Georgia</option>
+<option value="DE">Germany</option>
+<option value="GH">Ghana</option>
+<option value="GI">Gibraltar</option>
+<option value="GR">Greece</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GG">Guernsey</option>
+<option value="GN">Guinea</option>
+<option value="GW">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HT">Haiti</option>
+<option value="HN">Honduras</option>
+<option value="HK">Hong Kong</option>
+<option value="HU">Hungary</option>
+<option value="IS">Iceland</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IR">Iran</option>
+<option value="IQ">Iraq</option>
+<option value="IE">Ireland</option>
+<option value="IM">Isle of Man</option>
+<option value="IL">Israel</option>
+<option value="IT">Italy</option>
+<option value="CI">Ivory Coast</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JE">Jersey</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KI">Kiribati</option>
+<option value="XK">Kosovo</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Laos</option>
+<option value="LV">Latvia</option>
+<option value="LB">Lebanon</option>
+<option value="LS">Lesotho</option>
+<option value="LR">Liberia</option>
+<option value="LY">Libya</option>
+<option value="LI">Liechtenstein</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MO">Macau</option>
+<option value="MK">Macedonia</option>
+<option value="MG">Madagascar</option>
+<option value="MW">Malawi</option>
+<option value="MY" selected>Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MT">Malta</option>
+<option value="MH">Marshall Islands</option>
+<option value="MR">Mauritania</option>
+<option value="MU">Mauritius</option>
+<option value="YT">Mayotte</option>
+<option value="MX">Mexico</option>
+<option value="FM">Micronesia</option>
+<option value="MD">Moldova</option>
+<option value="MC">Monaco</option>
+<option value="MN">Mongolia</option>
+<option value="ME">Montenegro</option>
+<option value="MS">Montserrat</option>
+<option value="MA">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="MM">Myanmar</option>
+<option value="NA">Namibia</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="NL">Netherlands</option>
+<option value="AN">Netherlands Antilles</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand</option>
+<option value="NI">Nicaragua</option>
+<option value="NE">Niger</option>
+<option value="NG">Nigeria</option>
+<option value="NU">Niue</option>
+<option value="KP">North Korea</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="NO">Norway</option>
+<option value="OM">Oman</option>
+<option value="PK">Pakistan</option>
+<option value="PW">Palau</option>
+<option value="PS">Palestine</option>
+<option value="PA">Panama</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PN">Pitcairn</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="PR">Puerto Rico</option>
+<option value="QA">Qatar</option>
+<option value="CG">Republic of the Congo</option>
+<option value="RE">Reunion</option>
+<option value="RO">Romania</option>
+<option value="RU">Russia</option>
+<option value="RW">Rwanda</option>
+<option value="BL">Saint Barthelemy</option>
+<option value="SH">Saint Helena</option>
+<option value="KN">Saint Kitts and Nevis</option>
+<option value="LC">Saint Lucia</option>
+<option value="MF">Saint Martin</option>
+<option value="PM">Saint Pierre and Miquelon</option>
+<option value="VC">Saint Vincent and the Grenadines</option>
+<option value="WS">Samoa</option>
+<option value="SM">San Marino</option>
+<option value="ST">Sao Tome and Principe</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="RS">Serbia</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SX">Sint Maarten</option>
+<option value="SK">Slovakia</option>
+<option value="SI">Slovenia</option>
+<option value="SB">Solomon Islands</option>
+<option value="SO">Somalia</option>
+<option value="ZA">South Africa</option>
+<option value="KR">South Korea</option>
+<option value="SS">South Sudan</option>
+<option value="ES">Spain</option>
+<option value="LK">Sri Lanka</option>
+<option value="SD">Sudan</option>
+<option value="SR">Suriname</option>
+<option value="SJ">Svalbard and Jan Mayen</option>
+<option value="SZ">Swaziland</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syria</option>
+<option value="TW">Taiwan</option>
+<option value="TJ">Tajikistan</option>
+<option value="TZ">Tanzania</option>
+<option value="TH">Thailand</option>
+<option value="TG">Togo</option>
+<option value="TK">Tokelau</option>
+<option value="TO">Tonga</option>
+<option value="TT">Trinidad and Tobago</option>
+<option value="TN">Tunisia</option>
+<option value="TR">Turkey</option>
+<option value="TM">Turkmenistan</option>
+<option value="TC">Turks and Caicos Islands</option>
+<option value="TV">Tuvalu</option>
+<option value="VI">U.S. Virgin Islands</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="AE">United Arab Emirates</option>
+<option value="GB">United Kingdom</option>
+<option value="US">United States</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="VA">Vatican</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Vietnam</option>
+<option value="WF">Wallis and Futuna</option>
+<option value="EH">Western Sahara</option>
+<option value="YE">Yemen</option>
+<option value="ZM">Zambia</option>
+<option value="ZW">Zimbabwe</option>
+</select>
+<br>
+<br>
+↓ For YouTube video title
+<br>
+<label for="yt_hl_enable">HL Enable:</label> <input type="checkbox" id="yt_hl_enable">
+<br>
+HL Language Code: <input type="text" id="yt_hl" size="5" style="margin:5px 0px"; value="en" readonly> <select id="yt_hl_select" onChange="document.getElementById('yt_hl').value = document.querySelector('#yt_hl_select').value">
+<option value="af">Afrikaans</option>
+<option value="sq">Albanian</option>
+<option value="am">Amharic</option>
+<option value="ar">Arabic</option>
+<option value="hy">Armenian</option>
+<option value="as">Assamese</option>
+<option value="az">Azerbaijani</option>
+<option value="bn">Bangla</option>
+<option value="eu">Basque</option>
+<option value="be">Belarusian</option>
+<option value="bs">Bosnian</option>
+<option value="bg">Bulgarian</option>
+<option value="my">Burmese</option>
+<option value="ca">Catalan</option>
+<option value="zh-CN">Chinese (China)</option>
+<option value="zh-HK">Chinese (Hong Kong)</option>
+<option value="zh-TW">Chinese (Taiwan)</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value="en" selected>English</option>
+<option value="en-IN">English (India)</option>
+<option value="en-GB">English (United Kingdom)</option>
+<option value="et">Estonian</option>
+<option value="fil">Filipino</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="fr-CA">French (Canada)</option>
+<option value="gl">Galician</option>
+<option value="ka">Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value="gu">Gujarati</option>
+<option value="iw">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value="hu">Hungarian</option>
+<option value="is">Icelandic</option>
+<option value="id">Indonesian</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value="kn">Kannada</option>
+<option value="kk">Kazakh</option>
+<option value="km">Khmer</option>
+<option value="ko">Korean</option>
+<option value="ky">Kyrgyz</option>
+<option value="lo">Lao</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value="mk">Macedonian</option>
+<option value="ms">Malay</option>
+<option value="ml">Malayalam</option>
+<option value="mr">Marathi</option>
+<option value="mn">Mongolian</option>
+<option value="ne">Nepali</option>
+<option value="no">Norwegian</option>
+<option value="or">Odia</option>
+<option value="fa">Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value="pt-PT">Portuguese (Portugal)</option>
+<option value="pa">Punjabi</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value="sr-Latn">Serbian (Latin)</option>
+<option value="si">Sinhala</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value="es">Spanish</option>
+<option value="es-419">Spanish (Latin America)</option>
+<option value="es-US">Spanish (United States)</option>
+<option value="sw">Swahili</option>
+<option value="sv">Swedish</option>
+<option value="ta">Tamil</option>
+<option value="te">Telugu</option>
+<option value="th">Thai</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value="ur">Urdu</option>
+<option value="uz">Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value="zu">Zulu</option>
+</select>
+</div>
+[insert_command]
+
+SAMMI.extCommand('YouTube Link Handler', 3355443, 52, {
+  string_link:['String - Link',15,'',1.15],
+  string_cc:['String - Country Code',14,'MY',1.15],
+  variable_videoid:['Variable - VideoID',14,'yt_videoid',1.15],
+  variable_duration:['Variable - Duration',14,'yt_duration',1.15],
+  variable_restricted:['Variable - Restricted',14,'yt_restricted',1.15],
+  debug_info:['Debug',2,false,0.25],
+})
+
+SAMMI.extCommand('YouTube Link Handler (Title)', 3355443, 52, {
+  enable_hl:['Enable - HL',2,false,0.4],
+  string_hl:['String - HL Code',14,'en',0.6],
+  enable_title:['Enable - Title',2,false,0.4],
+  variable_title:['Variable - Title',14,'yt_title',0.7],
+})
+
+[insert_hook]
+
+case "YouTube Link Handler":{
+YTLinkHandler(SAMMIJSON.string_link,SAMMIJSON.string_cc,SAMMIJSON.variable_videoid,SAMMIJSON.variable_duration,SAMMIJSON.variable_restricted,SAMMIJSON.debug_info)
+}break
+
+case "YouTube Link Handler (Title)":{
+  enable_hl = SAMMIJSON.enable_hl || false;
+  string_hl = SAMMIJSON.string_hl || 'en';
+  enable_title = SAMMIJSON.enable_title || false;
+  variable_title = SAMMIJSON.variable_title || 'yt_title';
+}break
+
+[insert_script]
+
+function YTLinkHandler(string_link, string_cc, variable_videoid, variable_duration, variable_restricted, debug_info) {
+
+var string_cc = string_cc.toUpperCase();
+
+	startSeconds = string_link.replace("list=","").split("t=")[1];
+    if (startSeconds == undefined) {
+      startSeconds = '0';
+     } else {
+      startSeconds = parseInt(startSeconds);
+      startSeconds = startSeconds*1000;
+    }
+  
+    var ID = '';
+    url = string_link.replace(/(>|<)/gi, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/|\/shorts\/)/);
+    if (url[2] !== undefined) {
+      ID = url[2].split(/[^0-9a-z_\-]/i);
+      ID = ID[0];
+    } else {
+      ID = url;
+    }
+
+  const data = {
+    key: 'AIzaSyDzVzP5v9C2fBfklzCs0vueBH89a-DGgGA',
+    id: ID,
+    part: 'snippet,contentDetails,status',
+	fields: 'items(id,snippet(title,liveBroadcastContent,localized(title)),contentDetails(duration,contentRating(ytRating),regionRestriction(blocked)),status(embeddable))',
+	hl: string_hl,
+  };
+  const YTbase_url = "https://www.googleapis.com/youtube/v3/videos";
+  const YTurl = new URL(YTbase_url);
+  Object.entries(data).forEach(([key, value]) => YTurl.searchParams.append(key, value));
+  const YTduration = fetch(YTurl, {
+    method: 'GET'
+  });
+
+  YTduration.then(response => {
+    return response.json();
+  }).then(data => {
+    try {
+	
+	if (enable_hl == true) {
+		videoTitle = data.items[0].snippet.localized.title;
+	} else {
+		videoTitle = data.items[0].snippet.title;
+	}
+	
+	embeddable = data.items[0].status.embeddable;
+	if (embeddable == false){
+		var embeddable = "0";
+		var embeddablemsg = "False (Not Embeddable)";
+		var embeddabletag = " [Not Embeddable]";
+	} else {
+		var embeddable = "1";
+		var embeddablemsg = "True (Is Embeddable)";
+		var embeddabletag = "";
+	}
+	
+	ytRating = data.items[0].contentDetails.contentRating.ytRating;
+	if (ytRating == undefined){
+		var ytRating = "0";
+		var ytRatingmsg = "0 (False)";
+		var ytRatingtag = "";
+	} else {
+		var ytRating = "1";
+		var ytRatingmsg = "1 (True)";
+		var ytRatingtag = " [Age]";
+	}
+	
+	if (data.items[0].contentDetails.regionRestriction == undefined){
+		var blocked = "0";
+		var blockedmsg = "0 (False) [regionRestriction not found]";
+		var blockedtag = "";
+	} else if (data.items[0].contentDetails.regionRestriction.blocked == undefined){
+		var blocked = "0";
+		var blockedmsg = "0 (False) [blocked not found]";
+		var blockedtag = "";
+	} else if (data.items[0].contentDetails.regionRestriction.blocked.includes(string_cc)){
+		var blocked = "1";
+		var blockedmsg = "1 (True)";
+		var blockedtag = " [Country]";
+	} else {
+		var blocked = "0";
+		var blockedmsg = "0 (False)";
+		var blockedtag = "";
+	}
+	
+      duration = data.items[0].contentDetails.duration;
+      duration = moment.duration(duration);
+      duration = duration._milliseconds;
+	  
+	  LeftOver = duration-startSeconds;
+	  
+	if (startSeconds != "0"){
+		var videoID = ID + "&&t=" + startSeconds/1000;
+	} else {
+		var videoID = ID;
+	}
+	
+	if (duration == "0") {
+		if (data.items[0].snippet.liveBroadcastContent != "none") {
+			var durationtag = " [Live Stream]";
+		} else {
+			var durationtag = " [Possible Live Stream]";
+		}
+	} else {
+		var durationtag = "";
+	}
+	
+	var restricted = "0";
+	
+	if (embeddable == "0") {
+		var restricted = Number(restricted) + 1;
+	}
+	if (ytRating == "1") {
+		var restricted = Number(restricted) + 1;
+	}
+	if (blocked == "1") {
+		var restricted = Number(restricted) + 1;
+	}
+	if (duration == "0") {
+		var restricted = Number(restricted) + 1;
+	}
+	
+	if (restricted == "0"){
+		var restrictedmsg = "0 (False)";
+	} else {
+		var restrictedmsg = restricted + " (True)";
+	}
+	  
+	if (debug_info == true) {
+		SAMMI.popUp('**Input Info**\nString - Link : ' + string_link + '\nString - Country Code : ' + string_cc + '\nEnable - HL : ' + enable_hl + '\nString - HL Code : ' + string_hl + '\n\n**API Return Info**\nVideoID : ' + ID + '\nOriginal Title : ' + data.items[0].snippet.title + '\nHL Title: ' + data.items[0].snippet.localized.title + '\n\nFull Duration : ' + duration + ' (' + duration/1000 + 'sec) ' + durationtag + '\nStart at Duration (t=) : ' + startSeconds + ' (' + startSeconds/1000 + 'sec)\nLeft over Duration : ' + LeftOver + ' (' + LeftOver/1000 + 'sec)\n\nIs Embeddable : ' + embeddablemsg + '\nAge Restrict : ' + ytRatingmsg + '\nCountry Restrict : ' + blockedmsg + '\nConclusion of Restrict : ' + restrictedmsg + embeddabletag + ytRatingtag + blockedtag + durationtag + '\n**End of API Info**\n\n**Extension Return**\nVariable - VideoID : ' + videoID + '\nVariable - Duration : ' + LeftOver + '\nVariable - Restricted : ' + restricted + '\nVariable - Title : ' + videoTitle + '\n \n \n \n \n ')
+	}
+	
+	SAMMI.setVariable(variable_videoid, videoID)
+	SAMMI.setVariable(variable_duration, LeftOver)
+	SAMMI.setVariable(variable_restricted, restricted)
+	if (enable_title == true) {
+	SAMMI.setVariable(variable_title, videoTitle)
+	}
+
+    } catch (err) {
+		
+		if (debug_info == true) {
+			SAMMI.popUp('**Error**\nCode : ' + data.error.code + '\nmessage : ' + data.error.message + '')
+		}
+		
+		SAMMI.notification('**Error**\nCode : ' + data.error.code + '\nmessage : ' + data.error.message + '')
+		SAMMI.alert('**Error**\nCode : ' + data.error.code + '\nmessage : ' + data.error.message + '')
+		
+    }
+	
+  });
+}
+
+//////////////////////////////////////////////////
+
+
+function yt_link_test() {
+	
+var string_link = yt_link.value || 'https://youtu.be/KaqC5FnvAEc?t=12';
+var string_cc = yt_cc.value.toUpperCase();
+var enable_hl = yt_hl_enable.checked;
+var string_hl = yt_hl.value;
+var debug_info = true;
+	
+	startSeconds = string_link.replace("list=","").split("t=")[1];
+    if (startSeconds == undefined) {
+      startSeconds = '0';
+     } else {
+      startSeconds = parseInt(startSeconds);
+      startSeconds = startSeconds*1000;
+    }
+  
+    var ID = '';
+    url = string_link.replace(/(>|<)/gi, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/|\/shorts\/)/);
+    if (url[2] !== undefined) {
+      ID = url[2].split(/[^0-9a-z_\-]/i);
+      ID = ID[0];
+    } else {
+      ID = url;
+    }
+
+/*  Temporary debug code for future usage
+
+	if (debug_info == true) {
+	SAMMI.popUp('Country Code : ' + string_cc + '\nOriginal Link/Message : ' + string_link + '\n\nVideoID : ' + ID + '\n\nurl : ' + url + '\n\nurl[0] : ' + url[0] + '\n\nurl[1] : ' + url[1] + '\n\nurl[2] : ' + url[2] + '')
+	}
+*/
+	
+  const data = {
+    key: 'AIzaSyDzVzP5v9C2fBfklzCs0vueBH89a-DGgGA',
+    id: ID,
+    part: 'snippet,contentDetails,status',
+	fields: 'items(id,snippet(title,liveBroadcastContent,localized(title)),contentDetails(duration,contentRating(ytRating),regionRestriction(blocked)),status(embeddable))',
+	hl: string_hl,
+  };
+  const YTbase_url = "https://www.googleapis.com/youtube/v3/videos";
+  const YTurl = new URL(YTbase_url);
+  Object.entries(data).forEach(([key, value]) => YTurl.searchParams.append(key, value));
+  const YTduration = fetch(YTurl, {
+    method: 'GET'
+  });
+
+  YTduration.then(response => {
+    return response.json();
+  }).then(data => {
+    try {
+	
+	if (enable_hl == true) {
+		videoTitle = data.items[0].snippet.localized.title;
+	} else {
+		videoTitle = data.items[0].snippet.title;
+	}
+	
+	embeddable = data.items[0].status.embeddable;
+	if (embeddable == false){
+		var embeddable = "0";
+		var embeddablemsg = "False (Not Embeddable)";
+		var embeddabletag = " [Not Embeddable]";
+	} else {
+		var embeddable = "1";
+		var embeddablemsg = "True (Is Embeddable)";
+		var embeddabletag = "";
+	}
+	
+	ytRating = data.items[0].contentDetails.contentRating.ytRating;
+	if (ytRating == undefined){
+		var ytRating = "0";
+		var ytRatingmsg = "0 (False)";
+		var ytRatingtag = "";
+	} else {
+		var ytRating = "1";
+		var ytRatingmsg = "1 (True)";
+		var ytRatingtag = " [Age]";
+	}
+	
+	if (data.items[0].contentDetails.regionRestriction == undefined){
+		var blocked = "0";
+		var blockedmsg = "0 (False) [regionRestriction not found]";
+		var blockedtag = "";
+	} else if (data.items[0].contentDetails.regionRestriction.blocked == undefined){
+		var blocked = "0";
+		var blockedmsg = "0 (False) [blocked not found]";
+		var blockedtag = "";
+	} else if (data.items[0].contentDetails.regionRestriction.blocked.includes(string_cc)){
+		var blocked = "1";
+		var blockedmsg = "1 (True)";
+		var blockedtag = " [Country]";
+	} else {
+		var blocked = "0";
+		var blockedmsg = "0 (False)";
+		var blockedtag = "";
+	}
+	
+      duration = data.items[0].contentDetails.duration;
+      duration = moment.duration(duration);
+      duration = duration._milliseconds;
+	  
+	  LeftOver = duration-startSeconds;
+	  
+	if (startSeconds != "0"){
+		var videoID = ID + "&&t=" + startSeconds/1000;
+	} else {
+		var videoID = ID;
+	}
+	
+	if (duration == "0") {
+		if (data.items[0].snippet.liveBroadcastContent != "none") {
+			var durationtag = " [Live Stream]";
+		} else {
+			var durationtag = " [Possible Live Stream]";
+		}
+	} else {
+		var durationtag = "";
+	}
+	
+	var restricted = "0";
+	
+	if (embeddable == "0") {
+		var restricted = Number(restricted) + 1;
+	}
+	if (ytRating == "1") {
+		var restricted = Number(restricted) + 1;
+	}
+	if (blocked == "1") {
+		var restricted = Number(restricted) + 1;
+	}
+	if (duration == "0") {
+		var restricted = Number(restricted) + 1;
+	}
+	
+	if (restricted == "0"){
+		var restrictedmsg = "0 (False)";
+	} else {
+		var restrictedmsg = restricted + " (True)";
+	}
+	  
+	if (debug_info == true) {
+		SAMMI.popUp('**Input Info**\nOriginal Link/Message : ' + string_link + '\nCountry Code : ' + string_cc + '\nHL Enable : ' + enable_hl + '\nHL Language Code : ' + string_hl + '\n\n**API Return Info**\nVideoID : ' + ID + '\nOriginal Title : ' + data.items[0].snippet.title + '\nHL Title: ' + data.items[0].snippet.localized.title + '\n\nFull Duration : ' + duration + ' (' + duration/1000 + 'sec) ' + durationtag + '\nStart at Duration (t=) : ' + startSeconds + ' (' + startSeconds/1000 + 'sec)\nLeft over Duration : ' + LeftOver + ' (' + LeftOver/1000 + 'sec)\n\nIs Embeddable : ' + embeddablemsg + '\nAge Restrict : ' + ytRatingmsg + '\nCountry Restrict : ' + blockedmsg + '\nConclusion of Restrict : ' + restrictedmsg + embeddabletag + ytRatingtag + blockedtag + durationtag + '\n**End of API Info**\n\n**Extension Return**\nVariable - VideoID : ' + videoID + '\nVariable - Duration : ' + LeftOver + '\nVariable - Restricted : ' + restricted + '\nVariable - Title : ' + videoTitle + '\n \n \n \n \n ')
+	}
+	
+    } catch (err) {
+		
+		if (debug_info == true) {
+			SAMMI.popUp('**Error**\nCode : ' + data.error.code + '\nmessage : ' + data.error.message + '')
+		}	
+		
+		SAMMI.notification('**Error**\nCode : ' + data.error.code + '\nmessage : ' + data.error.message + '')
+		SAMMI.alert('**Error**\nCode : ' + data.error.code + '\nmessage : ' + data.error.message + '')
+	
+    }
+	
+  });
+}
+[insert_over]
+{ "deck_data": "{ \"background_color\": 4210752.0, \"on\": 0, \"grid_y\": 10.0, \"snap_grid\": 1.0, \"lb_version\": \"2.02.0\", \"background_image\": \"\", \"encrypted\": 0.0, \"adaptive_resizing\": 1.0, \"unique_id\": \"20211228184127645246489\", \"button_list\": [ { \"color\": 192.0, \"persistent\": 0.0, \"text\": \"Youtube\\nLink\\nHandler\", \"release_duration\": 0.0, \"queueable\": 1.0, \"command_list\": [ { \"cmd\": 5.0, \"obsid\": \"Main\", \"pos\": 0.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 81.0, \"b0\": \"Remember to add your button trigger,\\nby Channel Point Redeem or by Chat Message.\\n\\nIf need see debug info, tick it on the extension,\\nso you know what info will be return from extension.\", \"v0\": 0.0 }, { \"cmd\": 4.0, \"obsid\": \"Main\", \"pos\": 1.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 81.0, \"b0\": \"channel_name = Set your own channel\\\/twitch name below on\\nyou can move the row below into button that you used for Auto Init\\n\\nreason of using channel_name is due to i(Leon :D) have bot account,\\ni need to specify this message is send to my own channel and not bot's channel\", \"v0\": 1.0 }, { \"b1\": \"=\", \"cmd\": 161.0, \"obsid\": \"Main\", \"pos\": 2.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"channel_name\", \"b2\": \"\\\"leonwong93\\\"\" }, { \"cmd\": 6.0, \"obsid\": \"Main\", \"pos\": 3.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 20.0, \"b0\": \"Delete last result,\\nso the wait until variable exist will work correclty\", \"v0\": 1.0 }, { \"cmd\": 78.0, \"obsid\": \"Main\", \"pos\": 4.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"global.yt_duration\" }, { \"cmd\": 6.0, \"obsid\": \"Main\", \"pos\": 5.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"Select how it trigger by, keep only 1, and untick off on the right >>>\", \"v0\": 6.0 }, { \"cmd\": 6.0, \"obsid\": \"Main\", \"pos\": 6.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 1.0, \"xpan\": 0.0, \"b0\": \"By Chat Message Trigger\", \"v0\": 2.0 }, { \"b1\": \"display_name\", \"cmd\": 66.0, \"obsid\": \"Main\", \"pos\": 7.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"displayname\" }, { \"b1\": \"0\", \"cmd\": 147.0, \"obsid\": \"Main\", \"pos\": 8.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"message\" }, { \"cmd\": 6.0, \"obsid\": \"Main\", \"pos\": 9.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 1.0, \"xpan\": 0.0, \"b0\": \"By Channel Point Redeem\", \"v0\": 2.0 }, { \"b1\": \"display_name\", \"cmd\": 66.0, \"obsid\": \"Main\", \"pos\": 10.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"displayname\" }, { \"b1\": \"message\", \"cmd\": 66.0, \"obsid\": \"Main\", \"pos\": 11.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"message\" }, { \"b1\": \"\\\/$message$\\\/\", \"b3\": \"0\", \"cmd\": 91.0, \"obsid\": \"Main\", \"pos\": 12.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"url_check1\", \"b2\": \"youtu.be\" }, { \"b1\": \"\\\/$message$\\\/\", \"b3\": \"0\", \"cmd\": 91.0, \"obsid\": \"Main\", \"pos\": 13.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"url_check2\", \"b2\": \"youtube.com\" }, { \"b53\": \"\", \"b5\": \"0\", \"b13\": \"==\", \"v14\": 0.0, \"b36\": \"\", \"b38\": \"\", \"v10\": 0.0, \"b32\": \"\", \"b19\": \"==\", \"b57\": \"\", \"b59\": \"\", \"b17\": \"\", \"b1\": \">\", \"v18\": 0.0, \"v16\": 0.0, \"b34\": \"==\", \"b7\": \"==\", \"b11\": \"\", \"b9\": \"\", \"b51\": \"\", \"b15\": \"\", \"b3\": \"url_check2\", \"b55\": \"==\", \"v12\": 0.0, \"cmd\": 7.0, \"b30\": \"\", \"b43\": \"==\", \"v21\": 0.0, \"v1\": 1.0, \"b26\": \"\", \"b28\": \"==\", \"obsid\": \"Main\", \"b22\": \"==\", \"pos\": 14.0, \"v5\": 0.0, \"b47\": \"\", \"b49\": \"==\", \"v3\": 0.0, \"vis\": 1.0, \"b24\": \"\", \"ms\": 0.0, \"b41\": \"\", \"sel\": 0.0, \"b45\": \"\", \"v9\": 0.0, \"dis\": 0.0, \"xpan\": 25.0, \"b20\": \"\", \"v7\": 0.0, \"b33\": \"\", \"v11\": 0.0, \"b16\": \"==\", \"b0\": \"url_check1\", \"b58\": \"==\", \"b56\": \"\", \"b18\": \"\", \"b4\": \">\", \"b12\": \"\", \"b52\": \"==\", \"b39\": \"\", \"b37\": \"==\", \"v15\": 0.0, \"b54\": \"\", \"b14\": \"\", \"b2\": \"0\", \"b31\": \"==\", \"v13\": 0.0, \"b35\": \"\", \"v17\": 0.0, \"v19\": 0.0, \"b50\": \"\", \"b8\": \"\", \"b6\": \"\", \"b10\": \"==\", \"b23\": \"\", \"v4\": 2.0, \"b48\": \"\", \"b46\": \"==\", \"v20\": 0.0, \"b42\": \"\", \"b29\": \"\", \"v0\": 14.0, \"b27\": \"\", \"b44\": \"\", \"b21\": \"\", \"v6\": 0.0, \"v8\": 0.0, \"v2\": 2.0, \"b25\": \"==\", \"b40\": \"==\", \"v22\": 0.0 }, { \"cmd\": 5.0, \"obsid\": \"Main\", \"pos\": 15.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 172.0, \"b0\": \"** This is optional and can be ignore\\\/delete if doesn't use **\\n** But if you going to use it, this must above\\\/run first **\\nThe variable you set on extension will be return as Global Variable\\n\\nEnable HL for return localized Title name,\\nChange HL Code base on your need, check HL Code on Transmitter.\\n\\nEnable Title if you need extension return video Title as Variable.\\nDefault variable for title : \\\/$global.yt_title$\\\/\", \"v0\": 1.0 }, { \"enable_hl\": 0.0, \"enable_title\": 0.0, \"cmd\": 0.0, \"variable_title\": \"yt_title\", \"obsid\": \"Main\", \"pos\": 16.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"string_hl\": \"en\", \"extcmd\": \"YouTube Link Handler (Title)\", \"ext\": \"Transmitter\" }, { \"cmd\": 5.0, \"obsid\": \"Main\", \"pos\": 17.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 337.0, \"b0\": \"The variable you set on extension will be return as Global Variable\\nChange Country Code if you are not on Malaysia\\nCheck yours 2 Digit ISO Country Code on Transmitter\\n\\nVideoID is for use on Browser URL Link, with timestamp if available.\\n\\nDuration is leftover video duration after minus timestamp if available,\\nor full video Duration if timestamp not detected on link.\\n\\nRestricted is to know video able to watch on your country or outside of youtube,\\nor it was age restricted which require login, but hardcoded for block it for safety,\\nRestricted return 0 mean safe to proceed\\n\\nDefault variable for\\nVideoID : \\\/$global.yt_videoid$\\\/\\nDuration : \\\/$global.yt_duration$\\\/\\nRestricted : \\\/$global.yt_restricted$\\\/\", \"v0\": 1.0 }, { \"variable_restricted\": \"yt_restricted\", \"string_cc\": \"MY\", \"cmd\": 0.0, \"obsid\": \"Main\", \"pos\": 18.0, \"vis\": 1.0, \"ms\": 0.0, \"string_link\": \"message\", \"variable_videoid\": \"yt_videoid\", \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"debug_info\": 0.0, \"extcmd\": \"YouTube Link Handler\", \"variable_duration\": \"yt_duration\", \"ext\": \"Transmitter\" }, { \"cmd\": 6.0, \"obsid\": \"Main\", \"pos\": 19.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 18.0, \"b0\": \"Wait 5sec for api return data,\\nthen check on error\", \"v0\": 7.0 }, { \"b1\": \"5000\", \"cmd\": 153.0, \"obsid\": \"Main\", \"pos\": 20.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"global.yt_duration\" }, { \"b53\": \"\", \"b5\": \"\", \"b13\": \"==\", \"v14\": 0.0, \"b36\": \"\", \"b38\": \"\", \"v10\": 0.0, \"b32\": \"\", \"b19\": \"==\", \"b57\": \"\", \"b59\": \"\", \"b17\": \"\", \"b1\": \"==\", \"v18\": 0.0, \"v16\": 0.0, \"b34\": \"==\", \"b7\": \"==\", \"b11\": \"\", \"b9\": \"\", \"b51\": \"\", \"b15\": \"\", \"b3\": \"\", \"b55\": \"==\", \"v12\": 0.0, \"cmd\": 7.0, \"b30\": \"\", \"b43\": \"==\", \"v21\": 0.0, \"v1\": 0.0, \"b26\": \"\", \"b28\": \"==\", \"obsid\": \"Main\", \"b22\": \"==\", \"pos\": 21.0, \"v5\": 0.0, \"b47\": \"\", \"b49\": \"==\", \"v3\": 0.0, \"vis\": 1.0, \"b24\": \"\", \"ms\": 0.0, \"b41\": \"\", \"sel\": 0.0, \"b45\": \"\", \"v9\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b20\": \"\", \"v7\": 0.0, \"b33\": \"\", \"v11\": 0.0, \"b16\": \"==\", \"b0\": \"global.yt_duration\", \"b58\": \"==\", \"b56\": \"\", \"b18\": \"\", \"b4\": \"==\", \"b12\": \"\", \"b52\": \"==\", \"b39\": \"\", \"b37\": \"==\", \"v15\": 0.0, \"b54\": \"\", \"b14\": \"\", \"b2\": \"\", \"b31\": \"==\", \"v13\": 0.0, \"b35\": \"\", \"v17\": 0.0, \"v19\": 0.0, \"b50\": \"\", \"b8\": \"\", \"b6\": \"\", \"b10\": \"==\", \"b23\": \"\", \"v4\": 0.0, \"b48\": \"\", \"b46\": \"==\", \"v20\": 0.0, \"b42\": \"\", \"b29\": \"\", \"v0\": 2.0, \"b27\": \"\", \"b44\": \"\", \"b21\": \"\", \"v6\": 0.0, \"v8\": 0.0, \"v2\": 1.0, \"b25\": \"==\", \"b40\": \"==\", \"v22\": 0.0 }, { \"b1\": \"\\\/$global.channel_name$\\\/\", \"cmd\": 148.0, \"obsid\": \"Main\", \"pos\": 22.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"@\\\/$global.channel_name$\\\/ Error on handling youtube link by extension\" }, { \"b53\": \"\", \"b5\": \"\", \"b13\": \"==\", \"v14\": 0.0, \"b36\": \"\", \"b38\": \"\", \"v10\": 0.0, \"b32\": \"\", \"b19\": \"==\", \"b57\": \"\", \"b59\": \"\", \"b17\": \"\", \"b1\": \"==\", \"v18\": 0.0, \"v16\": 0.0, \"b34\": \"==\", \"b7\": \"==\", \"b11\": \"\", \"b9\": \"\", \"b51\": \"\", \"b15\": \"\", \"b3\": \"\", \"b55\": \"==\", \"v12\": 0.0, \"cmd\": 12.0, \"b30\": \"\", \"b43\": \"==\", \"v21\": 0.0, \"b26\": \"\", \"b28\": \"==\", \"obsid\": \"Main\", \"b22\": \"==\", \"pos\": 23.0, \"v5\": 0.0, \"b47\": \"\", \"b49\": \"==\", \"v3\": 0.0, \"vis\": 1.0, \"b24\": \"\", \"ms\": 0.0, \"b41\": \"\", \"sel\": 0.0, \"b45\": \"\", \"v9\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b20\": \"\", \"v7\": 0.0, \"b33\": \"\", \"v11\": 0.0, \"b16\": \"==\", \"b0\": \"\", \"b58\": \"==\", \"b56\": \"\", \"b18\": \"\", \"b4\": \"==\", \"b12\": \"\", \"b52\": \"==\", \"b39\": \"\", \"b37\": \"==\", \"v15\": 0.0, \"b54\": \"\", \"b14\": \"\", \"b2\": \"\", \"b31\": \"==\", \"v13\": 0.0, \"b35\": \"\", \"v17\": 0.0, \"v19\": 0.0, \"b50\": \"\", \"b8\": \"\", \"b6\": \"\", \"b10\": \"==\", \"b23\": \"\", \"v4\": 0.0, \"b48\": \"\", \"b46\": \"==\", \"v20\": 0.0, \"b42\": \"\", \"b29\": \"\", \"b27\": \"\", \"b44\": \"\", \"b21\": \"\", \"v6\": 0.0, \"v8\": 0.0, \"v2\": 1.0, \"b25\": \"==\", \"b40\": \"==\", \"v22\": 0.0 }, { \"b53\": \"\", \"b5\": \"\", \"b13\": \"==\", \"v14\": 0.0, \"b36\": \"\", \"b38\": \"\", \"v10\": 0.0, \"b32\": \"\", \"b19\": \"==\", \"b57\": \"\", \"b59\": \"\", \"b17\": \"\", \"b1\": \">\", \"v18\": 0.0, \"v16\": 0.0, \"b34\": \"==\", \"b7\": \"==\", \"b11\": \"\", \"b9\": \"\", \"b51\": \"\", \"b15\": \"\", \"b3\": \"\", \"b55\": \"==\", \"v12\": 0.0, \"cmd\": 7.0, \"b30\": \"\", \"b43\": \"==\", \"v21\": 0.0, \"v1\": 0.0, \"b26\": \"\", \"b28\": \"==\", \"obsid\": \"Main\", \"b22\": \"==\", \"pos\": 24.0, \"v5\": 0.0, \"b47\": \"\", \"b49\": \"==\", \"v3\": 0.0, \"vis\": 1.0, \"b24\": \"\", \"ms\": 0.0, \"b41\": \"\", \"sel\": 0.0, \"b45\": \"\", \"v9\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b20\": \"\", \"v7\": 0.0, \"b33\": \"\", \"v11\": 0.0, \"b16\": \"==\", \"b0\": \"global.yt_restricted\", \"b58\": \"==\", \"b56\": \"\", \"b18\": \"\", \"b4\": \"==\", \"b12\": \"\", \"b52\": \"==\", \"b39\": \"\", \"b37\": \"==\", \"v15\": 0.0, \"b54\": \"\", \"b14\": \"\", \"b2\": \"0\", \"b31\": \"==\", \"v13\": 0.0, \"b35\": \"\", \"v17\": 0.0, \"v19\": 0.0, \"b50\": \"\", \"b8\": \"\", \"b6\": \"\", \"b10\": \"==\", \"b23\": \"\", \"v4\": 0.0, \"b48\": \"\", \"b46\": \"==\", \"v20\": 0.0, \"b42\": \"\", \"b29\": \"\", \"v0\": 2.0, \"b27\": \"\", \"b44\": \"\", \"b21\": \"\", \"v6\": 0.0, \"v8\": 0.0, \"v2\": 1.0, \"b25\": \"==\", \"b40\": \"==\", \"v22\": 0.0 }, { \"b1\": \"\\\/$global.channel_name$\\\/\", \"cmd\": 148.0, \"obsid\": \"Main\", \"pos\": 25.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"@\\\/$displayname$\\\/ it seem the youtube link have some restriction, it could be : Age Restrict \\\/ Country Restrict (Malaysia) \\\/ Limited to watch on Youtube only \\\/ It is Live Streaming\" }, { \"b53\": \"\", \"b5\": \"\", \"b13\": \"==\", \"v14\": 0.0, \"b36\": \"\", \"b38\": \"\", \"v10\": 0.0, \"b32\": \"\", \"b19\": \"==\", \"b57\": \"\", \"b59\": \"\", \"b17\": \"\", \"b1\": \"==\", \"v18\": 0.0, \"v16\": 0.0, \"b34\": \"==\", \"b7\": \"==\", \"b11\": \"\", \"b9\": \"\", \"b51\": \"\", \"b15\": \"\", \"b3\": \"\", \"b55\": \"==\", \"v12\": 0.0, \"cmd\": 12.0, \"b30\": \"\", \"b43\": \"==\", \"v21\": 0.0, \"b26\": \"\", \"b28\": \"==\", \"obsid\": \"Main\", \"b22\": \"==\", \"pos\": 26.0, \"v5\": 0.0, \"b47\": \"\", \"b49\": \"==\", \"v3\": 0.0, \"vis\": 1.0, \"b24\": \"\", \"ms\": 0.0, \"b41\": \"\", \"sel\": 0.0, \"b45\": \"\", \"v9\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b20\": \"\", \"v7\": 0.0, \"b33\": \"\", \"v11\": 0.0, \"b16\": \"==\", \"b0\": \"\", \"b58\": \"==\", \"b56\": \"\", \"b18\": \"\", \"b4\": \"==\", \"b12\": \"\", \"b52\": \"==\", \"b39\": \"\", \"b37\": \"==\", \"v15\": 0.0, \"b54\": \"\", \"b14\": \"\", \"b2\": \"\", \"b31\": \"==\", \"v13\": 0.0, \"b35\": \"\", \"v17\": 0.0, \"v19\": 0.0, \"b50\": \"\", \"b8\": \"\", \"b6\": \"\", \"b10\": \"==\", \"b23\": \"\", \"v4\": 0.0, \"b48\": \"\", \"b46\": \"==\", \"v20\": 0.0, \"b42\": \"\", \"b29\": \"\", \"b27\": \"\", \"b44\": \"\", \"b21\": \"\", \"v6\": 0.0, \"v8\": 0.0, \"v2\": 1.0, \"b25\": \"==\", \"b40\": \"==\", \"v22\": 0.0 }, { \"cmd\": 6.0, \"obsid\": \"Main\", \"pos\": 27.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 41.0, \"b0\": \"Do what you need with the info return from extension,\\nif you using it as Youtube Interruption\\nbelow is the url to be used on browser source\", \"v0\": 1.0 }, { \"b1\": \"{\\\"url\\\":\\\"https:\\\/\\\/leonwong93.github.io\\\/OBS-Youtube-Player\\\/?watch?v=\\\/$global.yt_videoid$\\\/\\\"}\", \"cmd\": 34.0, \"obsid\": \"Main\", \"pos\": 28.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 1.0, \"xpan\": 0.0, \"b0\": \"\" }, { \"b1\": \"\\\/$global.channel_name$\\\/\", \"cmd\": 148.0, \"obsid\": \"Main\", \"pos\": 29.0, \"vis\": 1.0, \"ms\": 0.0, \"sel\": 0.0, \"dis\": 0.0, \"xpan\": 0.0, \"b0\": \"@\\\/$displayname$\\\/ not a valid youtube link, check the link again\" } ], \"press_type\": 0.0, \"x\": 0.40000000000000002220446049250313, \"border\": 2.0, \"image\": \"\", \"triggers\": [ ], \"group_id\": \"\", \"overlappable\": 0.0, \"init_variable\": \"\", \"deck\": 6.0, \"width\": 0.19999999999999995559107901499374, \"button_id\": \"YouTubeLinkHandler\", \"button_duration\": 0.0, \"y\": 0.40000000000000002220446049250313, \"switch_deck\": \"\", \"height\": 0.19999999999999995559107901499374, \"release_list\": [ ], \"functions\": 129.0, \"stretch\": 0.0 } ], \"deck_name\": \"Youtube Link Handler\", \"grid_x\": 10.0, \"stretch\": 0.0 }", "unique_id": "20211228184127645246489", "deck_verification_code": "70eeea07905dc86ed9411bdc8f786377f3e53021", "include_image": { } }
