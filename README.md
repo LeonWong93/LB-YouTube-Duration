@@ -14,9 +14,41 @@ Pass a youtube link to extension, and it will return 3 variable for you.
    - Is require Age Verify (18+)
    - Is restricted on your country
    - Is a live stream
+4. (Optional) Return YouTube video's title
+   - select language code (HL) for capture other title language if available
    
 enable Debug if extension is not function correctly for view more info
 
+Briefing of the Extension Command field
+```
+String - Link : The YouTube URL Link that pass to extension.
+Can be fixed URL link or from a variable
+
+String - Country Code : Country code for check on video restriction. 
+Example: MY for Malaysia. Check on transmitter for country code.
+
+Variable - VideoID : Variable to store the unique YouTube ID that was returned.
+Example if String - Link = https://www.youtube.com/watch?v=KaqC5FnvAEc , will return as KaqC5FnvAEc
+Support link with timestamp like https://www.youtube.com/watch?v=KaqC5FnvAEc&t=12s , will return as KaqC5FnvAEc&t=12
+
+Variable - Duration : Variable to store the left over video duration (in milliseconds) that was returned via the YouTube API.
+Works with videos with ?t= on the URL.
+Example if &t=12s and the total video duration is 60sec, will return as 48000.
+
+Variable Restricted : Variable to store the value if the video has age/country/livestream/embedded on third party website's restrictions.
+If return as 0 mean video is assumed safe to view on stream,
+will return 1/2/3/4 depending on how many restrictions found.
+```
+v3.2 New Extension Commands
+```
+Enable - HL : Tick for make API return localized Video Title base on String - HL Code
+
+String - HL Code : Language code, check it on Transmitter for language that YouTube supported.
+
+Enable - Title : Tick for extension return Video Title as variable
+
+Variable - Title : Variable to store the video's Title
+```
 ----
 
 Original Message by Christinna K: 
